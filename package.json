@@ -1,13 +1,13 @@
 {
-  "name": "obsidian42-brat",
+  "name": "obsidian-plugin-manager",
   "version": "1.0.1",
-  "description": "Obsidian42 - Beta Reviewer's Autoupdate Tool.",
+  "description": "Obsidian Plugin Manager",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
     "build": "node esbuild.config.mjs production",
     "version": "node version-bump.mjs",
-    "githubaction": "node version-github-action.mjs",
+    "version:github": "node version-github-action.mjs",
     "lint:check": "eslint --ext .ts,.tsx .",
     "lint:fix": "eslint --fix --ext .ts,.tsx .",
     "format:check": "prettier --check .",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/TfTHacker/obsidian42-brat.git"
+    "url": "git://github.com/joelvaneenwyk/obsidian-plugin-manager.git"
   },
   "devDependencies": {
     "typescript": "5.4.3",
