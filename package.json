@@ -20,7 +20,7 @@
     "url": "git://github.com/joelvaneenwyk/obsidian-plugin-manager.git"
   },
   "devDependencies": {
-    "typescript": "5.4.3",
+    "typescript": "5.4.5",
     "tslib": "^2.6.2",
     "@types/node": "^20.12.4",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
