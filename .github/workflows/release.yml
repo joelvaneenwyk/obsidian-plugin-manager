@@ -20,17 +20,21 @@ jobs:
         with:
           node-version: '21.x'
 
-      - name: Build plugin
+      - name: Install ⚙️
+        run: |
+          npm install
+          
+      - name: Build ❤️‍🔥
         run: |
           npm install
           npm run build
 
-      - name: Create release
+      - name: Release 🚀
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           tag="${GITHUB_REF#refs/tags/}"
-
           gh release create "$tag" \
             --title="$tag" \
             build/main.js manifest.json styles.css
