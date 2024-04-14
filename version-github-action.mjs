@@ -13,13 +13,16 @@ fs.readFile('manifest.json', 'utf8', (err, data) => {
     const version = manifest.version;
 
     // Execute the git commands
-    exec(`git tag -a ${version} -m "${version}" && git push origin ${version}`, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`exec error: ${error}`);
-        return;
+    exec(
+      `git tag -a ${version} -m "${version}" && git push origin ${version}`,
+      (error, stdout, stderr) => {
+        if (error) {
+          console.error(`exec error: ${error}`);
+          return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
       }
-      console.log(`stdout: ${stdout}`);
-      console.error(`stderr: ${stderr}`);
-    });
+    );
   }
 });

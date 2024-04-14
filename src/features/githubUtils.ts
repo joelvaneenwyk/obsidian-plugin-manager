@@ -48,14 +48,14 @@ export const grabReleaseFileFromRepository = async (
     const isPrivate = await isPrivateRepo(repository, debugLogging, personalAccessToken);
 
     if (isPrivate) {
-      type Release = {
+      interface Release {
         url: string;
         tag_name: string;
         assets: {
           name: string;
           url: string;
         }[];
-      };
+      }
 
       // get the asset id
       // fetch https://api.github.com/repos/{repos}/releases , parse the response
